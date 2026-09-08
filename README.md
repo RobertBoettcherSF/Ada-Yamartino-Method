@@ -47,13 +47,22 @@ Named exceptions: `Invalid_Argument`, `Empty_Sample` (also
 
 Accumulate over $n$ angles $\theta_i$:
 
-$$s_a = \frac{1}{n}\sum_{i=1}^{n}\sin\theta_i,\quad c_a = \frac{1}{n}\sum_{i=1}^{n}\cos\theta_i$$
+$$
+s_a = \frac{1}{n}\sum_{i=1}^{n}\sin\theta_i,\quad
+c_a = \frac{1}{n}\sum_{i=1}^{n}\cos\theta_i
+$$
 
-$$\theta_a = \operatorname{arctan2}(s_a, c_a) \quad\text{(four-quadrant; Ada: }\texttt{Arctan(Y => } s_a\texttt{, X => } c_a\texttt{)}\text{)}$$
+$$
+\theta_a = \text{arctan2}(s_a, c_a) \quad (\text{four-quadrant; Ada: Arctan(Y => } s_a \text{, X => } c_a \text{)})
+$$
 
-$$\varepsilon = \sqrt{1 - (s_a^2 + c_a^2)},\qquad \sigma_\theta = \arcsin(\varepsilon)\left[1 + \left(\frac{2}{\sqrt{3}} - 1\right)\varepsilon^3\right]$$
+$$
+\varepsilon = \sqrt{1 - (s_a^2 + c_a^2)},\qquad
+\sigma_\theta = \arcsin(\varepsilon)\left[1 + \left(\frac{2}{\sqrt{3}} - 1\right)\varepsilon^3\right]
+$$
 
 Constant direction $\implies \varepsilon = 0 \implies \sigma_\theta = 0$. Oscillating or nearly uniform directions push $\varepsilon \to 1$ and $\sigma_\theta \to \pi / \sqrt{3}$.
+
 ## Usage
 
 ```bash
