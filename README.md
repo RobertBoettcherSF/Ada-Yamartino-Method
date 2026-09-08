@@ -7,7 +7,7 @@ Educational, self-contained Ada 2023 package implementing the
 
 Naive linear mean/variance on angles wrap incorrectly: 1° and 359° average
 to 180° instead of ~0°. Circular statistics place directions on the unit
-circle; Yamartino accumulates only \(\sin\theta\) and \(\cos\theta\) totals
+circle; Yamartino accumulates only $\sin\theta$ and $\cos\theta$ totals
 so the interval can be reduced without storing every sample.
 
 ## Project Overview
