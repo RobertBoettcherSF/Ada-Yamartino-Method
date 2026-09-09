@@ -14,9 +14,9 @@ so the interval can be reduced without storing every sample.
 
 | Concern | Approach | Notes |
 | --- | --- | --- |
-| **Circular mean** | \(\theta_a = \mathrm{atan2}(s_a, c_a)\) | Four-quadrant |
-| **Single-pass σ** | Yamartino \(\varepsilon\) + arcsin factor | vs two-pass |
-| **Online accumulator** | `Running_Yamartino` | \(n\), \(\sum\sin\), \(\sum\cos\) |
+| **Circular mean** | $\theta_a = \mathrm{atan2}(s_a, c_a)$ | Four-quadrant |
+| **Single-pass σ** | Yamartino $\varepsilon$ + arcsin factor | vs two-pass |
+| **Online accumulator** | `Running_Yamartino` | $n$, $\sum\sin$, $\sum\cos$ |
 | **Batch API** | `Yamartino` / `Yamartino_Degrees` | Convenience |
 | **Two-pass reference** | `Circular_Mean`, angular / R-based std | Tests / compare |
 | **Naive linear** | Documented **wrong** for wrap-around | Educational contrast |
@@ -87,9 +87,9 @@ There is no interactive `main.adb`; `tests.adb` is the project main.
 - Opposing / high-dispersion winds
 - Running accumulator ≡ batch
 - Degree API
-- \(\varepsilon\) / \(\sigma\) formula pieces
+- $\varepsilon$ / $\sigma$ formula pieces
 - Naive linear fails wrap-around where Yamartino succeeds
-- High-\(n\) synthetic stability
+- High-$n$ synthetic stability
 - Degenerate / cardinal / equivalent-angle fixtures
 
 ## Building
